@@ -20,13 +20,15 @@ void Ship::setship(string **array, int area)
 
     char o;
 
-    do{cout << "Ingrese sus coordenada X para su " << name << endl;
-
+    do{
+        cout << "Ingrese sus coordenada X para su " << name << endl;
         cin >> x;
+        x=x-1;
 
         cout << "Ingrese su coordenada Y para su " << name << endl;
 
         cin >> y;
+        y=y-1;
 
         cout << "Ingrese su orientacion (H o V) para su " << name << endl;
 

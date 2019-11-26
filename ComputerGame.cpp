@@ -8,7 +8,8 @@ void ComputerGame::setsize(int tamano) {size = tamano;}
 
 void ComputerGame::createtable()
 {
-    computerboard = new string *[size];  referenceboard = new string*[size];
+    computerboard = new string *[size];
+    referenceboard = new string*[size];
 
     for (int k = 0; k < size; ++k)
     {
@@ -33,6 +34,7 @@ void ComputerGame::createtable()
 
 void ComputerGame::printcomputer()
 {
+
     for (int i = 0; i < size; ++i) {
 
         for (int j = 0; j < size; ++j) {
@@ -90,10 +92,12 @@ int ComputerGame::playerturn(int counter)
     cout << "Inserte la coordenada X de su ataque" << endl;
 
     cin >> x;
+    x=x-1;
 
     cout << "Inserte la coordenada Y de su ataque" << endl;
 
     cin >> y;
+    y = y-1;
 
     if (x >= size || y >= size)
 

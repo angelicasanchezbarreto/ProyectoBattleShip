@@ -16,9 +16,17 @@ void Game::start()
 
 }
 
-void Game::setsize() {int tamano; do{cin >> tamano;}while(tamano < 5); size = tamano;}
+void Game::setsize() {
+    int tamano;
+    do{
+        cin >> tamano;
+    } while(tamano < 5);
+    size = tamano;
+}
 
-int Game::getsize() {return size;}
+int Game::getsize() {
+    return size;
+}
 
 void Game::createtable()
 {
@@ -32,13 +40,9 @@ void Game::createtable()
     }
 
     for (int i = 0; i < size; ++i)
-
     {
-
         for (int j = 0; j < size; ++j)
-
         {
-
             playerboard[i][j] = "~ ";
 
         }
