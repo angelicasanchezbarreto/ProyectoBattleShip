@@ -30,24 +30,17 @@ int Game::getsize() {
 
 void Game::createtable()
 {
-    playerboard = new string*[size];
-
-    for (int k = 0; k < size; ++k)
-
+    for (size_t i = 0; i < size; i++)
     {
-        playerboard[k] = new string[size];
-
-    }
-
-    for (int i = 0; i < size; ++i)
-    {
-        for (int j = 0; j < size; ++j)
+        vector<casilla> vectorTemporal;
+        for (size_t j = 0; j < size; j++)
         {
-            playerboard[i][j] = "~ ";
-
+            casilla casillaTemporal; 
+            vectorTemporal.push_back(casillaTemporal);
         }
-
+        tableroJugador.push_back(vectorTemporal); 
     }
+    
 }
 
 void Game::printplayer()
@@ -56,48 +49,46 @@ void Game::printplayer()
 
         for (int j = 0; j < size; ++j) {
 
-            cout << playerboard[i][j];
+            cout << setw(2) << tableroJugador[i][j].getChar();
         }
-
         cout << endl;
-
     }
 }
 
 
 void Game::settable() {
 
-    playerbattleship.setship(playerboard, size);
+    playerbattleship.setship(tableroJugador, size);
+    printplayer();
+
+    playercruiser.setship(tableroJugador, size);
 
     printplayer();
 
-    playercruiser.setship(playerboard, size);
+    playercruiser1.setship(tableroJugador, size);
 
     printplayer();
 
-    playercruiser1.setship(playerboard, size);
+    playerdestroyer.setship(tableroJugador, size);
 
     printplayer();
 
-    playerdestroyer.setship(playerboard, size);
+    playerdestroyer1.setship(tableroJugador, size);
 
     printplayer();
 
-    playerdestroyer1.setship(playerboard, size);
+    playerdestroyer2.setship(tableroJugador, size);
 
     printplayer();
 
-    playerdestroyer2.setship(playerboard, size);
+    playersubmarine.setship(tableroJugador, size);
 
     printplayer();
 
-    playersubmarine.setship(playerboard, size);
+    playersubmarine1.setship(tableroJugador, size);
 
     printplayer();
-
-    playersubmarine1.setship(playerboard, size);
-
-    printplayer();}
+}
 
 
 int Game::computerturn(int counter)
@@ -106,37 +97,34 @@ int Game::computerturn(int counter)
 
     int y = rand()%size;
 
-
-    if (playerboard[y][x] == "o "){
-
-        cout << "La computadora ha acertado" << endl;
-
-        playerboard[y][x] = "+ ";
-
-        printplayer();
-
-        counter++;
-
-        computerdoubleturn(counter, x, y);
-
-    }
+    if(tableroJugador[y][x].isAttacked()) computerturn(counter);
 
     else
-
     {
-        if (playerboard[y][x] == "~ ")
-        {
 
-            cout << "La computadora fallo, es tu turno" << endl;
+        if (tableroJugador[y][x].isOccupied()){
 
-            playerboard[y][x] = "- ";
+            cout << "La computadora ha acertado" << endl;
+
+            tableroJugador[y][x].attackHit();
+
+            printplayer();
+
+            counter++;
+
+            computerdoubleturn(counter, x, y);
         }
 
         else
+
         {
+            if (!tableroJugador[y][x].isOccupied())
+            {
 
-            if(playerboard[y][x] == "+ " || playerboard[y][x] == "- ") computerturn(counter);
+                cout << "La computadora fallo, es tu turno" << endl;
 
+                tableroJugador[y][x].attackMiss();
+            }
         }
     }
 
@@ -169,15 +157,17 @@ int Game::computerdoubleturn(int counter, int x, int y)
 
     if (cx >= size || cx < 0 || cy >= size || cy < 0) computerdoubleturn(counter, x, y);
 
+    if(tableroJugador[cy][cx].isAttacked()) computerturn(counter);
+
     else
 
     {
 
-        if (playerboard[cy][cx] == "o "){
+        if (tableroJugador[cy][cx].isOccupied()){
 
             cout << "La computadora ha acertado" << endl;
 
-            playerboard[cy][cx] = "+ ";
+            tableroJugador[cy][cx].attackHit();
 
             printplayer();
 
@@ -190,18 +180,12 @@ int Game::computerdoubleturn(int counter, int x, int y)
         else
 
         {
-            if (playerboard[cy][cx] == "~ ")
+            if (!tableroJugador[cy][cx].isOccupied())
 
             {
                 cout << "La computadora fallo, es tu turno" << endl;
 
-                playerboard[cy][cx] == "- ";
-            }
-
-            else
-
-            {
-                if(playerboard[cy][cx] == "+ " || playerboard[cy][cx] == "- ") computerturn(counter);
+                tableroJugador[cy][cx].attackMiss();
             }
         }
 

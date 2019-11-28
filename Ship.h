@@ -5,11 +5,7 @@
 #ifndef PROYECTOBATTLESHIP_SHIP_H
 #define PROYECTOBATTLESHIP_SHIP_H
 
-
-#include <iostream>
-#include <string>
-#include <cstdlib>
-#include <ctime>
+#include "casilla.h"
 
 using namespace std;
 
@@ -39,15 +35,15 @@ public:
 
     string getname();
 
-    bool check(string **array, int area);
+    bool check(vector<vector<casilla>> board, int area);
 
-    void setship(string **array, int area);
+    void setship(vector<vector<casilla>> &board, int area);
 
-    void setcomputership(string **array, int area);
+    void setcomputership(vector<vector<casilla>> &board, int area);
 
-    void locate(string **array, int area);
+    void locate(vector<vector<casilla>> &board, int area);
 
-    void locatecomputer(string **array, int area);
+    void locatecomputer(vector<vector<casilla>> &board, int area);
 
 };
 

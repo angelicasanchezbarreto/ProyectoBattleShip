@@ -12,7 +12,7 @@ int Ship::getsize() {return size;}
 
 string Ship::getname() {return name;}
 
-void Ship::setship(string **array, int area)
+void Ship::setship(vector<vector<casilla>> &board, int area)
 
 {   int x;
 
@@ -23,15 +23,11 @@ void Ship::setship(string **array, int area)
     do{
         cout << "Ingrese sus coordenada X para su " << name << endl;
         cin >> x;
-        x=x-1;
 
         cout << "Ingrese su coordenada Y para su " << name << endl;
-
         cin >> y;
-        y=y-1;
 
         cout << "Ingrese su orientacion (H o V) para su " << name << endl;
-
         cin >> o;}
 
     while((o == 'H' && (x + size > area - 1 || y > area)) || ((o == 'V' && (y + size > area || x > area ))) || (o != 'H' && o != 'V'));
@@ -42,10 +38,11 @@ void Ship::setship(string **array, int area)
 
     orientation = o;
 
-    locate(array, area);}
+    locate(board, area);
+}
 
 
-void Ship::setcomputership(string **array, int area)
+void Ship::setcomputership(vector<vector<casilla>> &board, int area)
 {
     int x; int y; char o;
 
@@ -54,7 +51,7 @@ void Ship::setcomputership(string **array, int area)
 
         if (rand()%2 == 1) o = 'H'; else o = 'V';}
 
-    while((o == 'H' && (x + size - 1 > area - 1 || y > area - 1)) || ((o == 'V' && (y + size - 1 > area - 1|| x > area - 1))) || (o != 'H' && o != 'V'));
+    while((o == 'H' && (x + size - 1 > area - 1 || y > area - 1)) || ((o == 'V' && (y + size - 1 > area - 1|| x > area - 1))) || (o != 'H' && o != 'V')); //Corregir 
 
     cx = x;
 
@@ -62,73 +59,81 @@ void Ship::setcomputership(string **array, int area)
 
     orientation = o;
 
-    locatecomputer(array, area);
+    locatecomputer(board, area);
 }
 
 
-void Ship::locate(string **array, int area)
+void Ship::locate(vector<vector<casilla>> &board, int area)
 
 {
-    if (check(array, area)) {
-
+    if (check(board, area)) 
+    {
         if (orientation == 'V')
-
-            for (int i = 0; i < size; i++) { array[cy + i][cx] = "o "; }
-
-        else
-
-            for (int i = 0; i < size; i++) { array[cy][cx + i] = "o "; }
-
-    }
-
-    else {
-
-        cout << "Ya hay un barco en esta posición, por favor, vuelve a poner los numeros" << endl;
-
-        setship(array, area);
-    }
-}
-
-void Ship::locatecomputer(string **array, int area)
-
-{
-    if (check(array, area)) {
-
-        if (orientation == 'V')
-
-            for (int i = 0; i < size; i++) { array[cy + i][cx] = "o "; }
-
-        else
-
-            for (int i = 0; i < size; i++) { array[cy][cx + i] = "o "; }
-
-    }
-
-    else {
-
-        setcomputership(array, area);
-
-    }
-}
-
-
-
-bool Ship::check(string **array, int area)
-
-{
-    bool flag = true;
-
-    for(int i = cx; i < size; i++) {
-
-        if (array[cy][i] == "o ") {
-
-            flag = false;
-
-            return flag;
+        {
+            for (int i = 0; i < size; i++) 
+            {
+                board[cy + i][cx].ocupar(name[0]);
+            }
         }
-
+        else
+        {
+            for (int i = 0; i < size; i++) 
+            {
+                board[cy][cx + i].ocupar(name[0]);
+            }
+        }
     }
 
-    return flag;
+    else 
+    {
+        cout << "Ya hay un barco en esta posición, por favor, vuelve a poner los numeros" << endl;
+        setship(board, area);
+    }
+}
+
+void Ship::locatecomputer(vector<vector<casilla>> &board, int area)
+
+{
+    if (check(board, area)) 
+    {
+        if (orientation == 'V'){
+
+            for (int i = 0; i < size; i++) 
+                board[cy + i][cx].ocupar(name[0]);
+        }
+        else{
+
+            for (int i = 0; i < size; i++) 
+                board[cy][cx + i].ocupar(name[0]);
+        }
+    }
+
+    else 
+    {
+        setship(board, area);
+    }
+}
+
+
+
+bool Ship::check(vector<vector<casilla>> board, int area)
+{
+    if (orientation == 'V')
+    {
+        for (int i = 0; i < size; i++)
+        {
+            if(board[cy+i][cx].isOccupied())
+                return false; 
+        }
+    }
+    else
+    {
+        for (int i = 0; i < size; i++)
+        {
+            if(board[cy][cx+i].isOccupied())
+                return false; 
+        }
+    }
+    return true; 
 }
 

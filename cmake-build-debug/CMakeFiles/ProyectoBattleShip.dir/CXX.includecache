@@ -6,31 +6,37 @@
 
 #IncludeRegexTransform: 
 
-/home/lica-pc/CLionProjects/POO 2/ProyectoBattleShip/ComputerGame.cpp
+/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/ComputerGame.cpp
 ComputerGame.h
-/home/lica-pc/CLionProjects/POO 2/ProyectoBattleShip/ComputerGame.h
+/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/ComputerGame.h
 
-/home/lica-pc/CLionProjects/POO 2/ProyectoBattleShip/ComputerGame.h
+/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/ComputerGame.h
 Ship.h
-/home/lica-pc/CLionProjects/POO 2/ProyectoBattleShip/Ship.h
+/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Ship.h
 Game.h
-/home/lica-pc/CLionProjects/POO 2/ProyectoBattleShip/Game.h
+/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Game.h
 
-/home/lica-pc/CLionProjects/POO 2/ProyectoBattleShip/Game.cpp
+/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Game.cpp
 Game.h
-/home/lica-pc/CLionProjects/POO 2/ProyectoBattleShip/Game.h
+/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Game.h
 Ship.cpp
-/home/lica-pc/CLionProjects/POO 2/ProyectoBattleShip/Ship.cpp
+/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Ship.cpp
 
-/home/lica-pc/CLionProjects/POO 2/ProyectoBattleShip/Game.h
+/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Game.h
 Ship.h
-/home/lica-pc/CLionProjects/POO 2/ProyectoBattleShip/Ship.h
+/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Ship.h
+Game.h
+/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Game.h
 
-/home/lica-pc/CLionProjects/POO 2/ProyectoBattleShip/Ship.cpp
+/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Ship.cpp
 Ship.h
-/home/lica-pc/CLionProjects/POO 2/ProyectoBattleShip/Ship.h
+/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Ship.h
 
-/home/lica-pc/CLionProjects/POO 2/ProyectoBattleShip/Ship.h
+/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Ship.h
+casilla.h
+/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/casilla.h
+
+/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/casilla.h
 iostream
 -
 string
@@ -39,10 +45,14 @@ cstdlib
 -
 ctime
 -
+vector
+-
+iomanip
+-
 
-/home/lica-pc/CLionProjects/POO 2/ProyectoBattleShip/main.cpp
+/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/main.cpp
 Game.cpp
-/home/lica-pc/CLionProjects/POO 2/ProyectoBattleShip/Game.cpp
+/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Game.cpp
 ComputerGame.cpp
-/home/lica-pc/CLionProjects/POO 2/ProyectoBattleShip/ComputerGame.cpp
+/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/ComputerGame.cpp
 

@@ -8,28 +8,17 @@ void ComputerGame::setsize(int tamano) {size = tamano;}
 
 void ComputerGame::createtable()
 {
-    computerboard = new string *[size];
-    referenceboard = new string*[size];
-
-    for (int k = 0; k < size; ++k)
+    for (size_t i = 0; i < size; i++)
     {
-        computerboard[k] = new string[size];
-
-        referenceboard[k] = new string[size];
-    }
-
-    for (int i = 0; i < size; ++i) {
-
-        for (int j = 0; j < size; ++j) {
-
-            computerboard[i][j] = "~ ";
-
-            referenceboard[i][j] = "~ ";
-
+        vector<casilla> vectorTemporal;
+        for (size_t j = 0; j < size; j++)
+        {
+            casilla casillaTemporal; 
+            vectorTemporal.push_back(casillaTemporal);
         }
-
+        tableroPC.push_back(vectorTemporal); 
+        tableroRef.push_back(vectorTemporal); 
     }
-
 }
 
 void ComputerGame::printcomputer()
@@ -39,8 +28,7 @@ void ComputerGame::printcomputer()
 
         for (int j = 0; j < size; ++j) {
 
-            cout << computerboard[i][j];
-
+            cout << setw(2) << tableroPC[i][j].getChar();
         }
 
         cout << endl;
@@ -54,7 +42,7 @@ void ComputerGame::printreference()
 
         for (int j = 0; j < size; ++j) {
 
-            cout << referenceboard[i][j];
+            cout << setw(2) <<tableroRef[i][j].getChar();
         }
 
         cout << endl;
@@ -64,21 +52,21 @@ void ComputerGame::printreference()
 
 void ComputerGame::settable()
 {
-    computerbattleship.setcomputership(computerboard, size);
+    computerbattleship.setcomputership(tableroPC, size);
 
-    computercruiser.setcomputership(computerboard, size);
+    computercruiser.setcomputership(tableroPC, size);
 
-    computercruiser1.setcomputership(computerboard, size);
+    computercruiser1.setcomputership(tableroPC, size);
 
-    computerdestroyer.setcomputership(computerboard, size);
+    computerdestroyer.setcomputership(tableroPC, size);
 
-    computerdestroyer1.setcomputership(computerboard, size);
+    computerdestroyer1.setcomputership(tableroPC, size);
 
-    computerdestroyer2.setcomputership(computerboard, size);
+    computerdestroyer2.setcomputership(tableroPC, size);
 
-    computersubmarine.setcomputership(computerboard, size);
+    computersubmarine.setcomputership(tableroPC, size);
 
-    computersubmarine1.setcomputership(computerboard, size);
+    computersubmarine1.setcomputership(tableroPC, size);
 
 
 }
@@ -92,12 +80,10 @@ int ComputerGame::playerturn(int counter)
     cout << "Inserte la coordenada X de su ataque" << endl;
 
     cin >> x;
-    x=x-1;
 
     cout << "Inserte la coordenada Y de su ataque" << endl;
 
     cin >> y;
-    y = y-1;
 
     if (x >= size || y >= size)
 
@@ -110,43 +96,53 @@ int ComputerGame::playerturn(int counter)
     else
 
     {
+        if (tableroRef[y][x].isAttacked()) 
+        {
 
-        if (computerboard[y][x] == "o "){
-
-            cout << "Has acertado" << endl;
-
-            computerboard[y][x] = "+ ";
-
-            referenceboard[y][x] = "+ ";
-
-            counter++;
+            cout << "Ya has disparado aqui." << endl;
 
             playerturn(counter);
 
         }
-
         else
-
         {
-            if (computerboard[y][x] == "~ ")
-            {
-                cout << "Has fallado" << endl;
 
-                referenceboard[y][x] = "- ";
+            if (tableroPC[y][x].isOccupied()){
+
+                cout << "Has acertado" << endl;
+
+                tableroPC[y][x].attackHit();
+
+                tableroRef[y][x].attackHit();
+
+                counter++;
+
+                playerturn(counter);
+
             }
 
             else
             {
-                if (referenceboard[y][x] == "+ " || referenceboard[y][x] == "- ") {
+                if (!tableroPC[y][x].isOccupied())
+                {
+                    cout << "Has fallado" << endl;
 
-                    cout << "Ya has disparado aqui." << endl;
+                    tableroRef[y][x].attackMiss();
+                }
 
-                    playerturn(counter);
+                else
+                {
+                    if (tableroRef[y][x].isAttacked()) {
+
+                        cout << "Ya has disparado aqui." << endl;
+
+                        playerturn(counter);
+
+                    }
 
                 }
 
             }
-
         }
 
     }

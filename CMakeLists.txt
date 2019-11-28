@@ -1,6 +1,15 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.13)
 project(ProyectoBattleShip)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 
-add_executable(ProyectoBattleShip main.cpp)
+include_directories(.)
+
+add_executable(ProyectoBattleShip
+        ComputerGame.cpp
+        ComputerGame.h
+        Game.cpp
+        Game.h
+        main.cpp
+        Ship.cpp
+        Ship.h)

@@ -13,6 +13,10 @@ class ComputerGame{
 
 private:
 
+    vector<vector<casilla>> tableroPC; 
+
+    vector<vector<casilla>> tableroRef; 
+
     string **computerboard;
 
     string **referenceboard;

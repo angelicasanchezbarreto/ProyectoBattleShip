@@ -7,10 +7,13 @@
 
 
 #include "Ship.h"
+#include "casilla.h"
 
 class Game {
 
 private:
+
+    vector<vector<casilla>> tableroJugador; 
 
     string **playerboard;
 
