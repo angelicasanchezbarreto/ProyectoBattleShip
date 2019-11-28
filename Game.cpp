@@ -3,7 +3,7 @@
 //
 
 #include "Game.h"
-#include "Ship.cpp"
+#include "Ship.h"
 
 void Game::start()
 {
@@ -58,34 +58,42 @@ void Game::printplayer()
 
 void Game::settable() {
 
-    playerbattleship.setship(tableroJugador, size);
-    printplayer();
-
-    playercruiser.setship(tableroJugador, size);
-
+    playeraircraft.setship(tableroJugador, size);
     printplayer();
 
     playercruiser1.setship(tableroJugador, size);
 
     printplayer();
 
-    playerdestroyer.setship(tableroJugador, size);
+    playercruiser2.setship(tableroJugador, size);
 
     printplayer();
 
-    playerdestroyer1.setship(tableroJugador, size);
+    playertorpedo1.setship(tableroJugador, size);
 
     printplayer();
 
-    playerdestroyer2.setship(tableroJugador, size);
+    playertorpedo2.setship(tableroJugador, size);
 
     printplayer();
 
-    playersubmarine.setship(tableroJugador, size);
+    playertorpedo3.setship(tableroJugador, size);
+
+    printplayer();
+
+    playertorpedo4.setship(tableroJugador, size);
 
     printplayer();
 
     playersubmarine1.setship(tableroJugador, size);
+
+    printplayer();
+
+    playersubmarine2.setship(tableroJugador, size);
+
+    printplayer();
+
+    playersubmarine3.setship(tableroJugador, size);
 
     printplayer();
 }

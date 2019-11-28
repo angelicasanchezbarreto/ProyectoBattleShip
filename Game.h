@@ -19,21 +19,25 @@ private:
 
     int size;
 
-    Ship playerbattleship = Ship(4, 0, "Battleship");
-
-    Ship playercruiser = Ship(3, 0, "Cruiser");
+    Ship playeraircraft = Ship(4, 0, "Aircraft");
 
     Ship playercruiser1 = Ship(3, 0, "Cruiser");
 
-    Ship playerdestroyer = Ship(2, 0, "Destroyer");
+    Ship playercruiser2 = Ship(3, 0, "Cruiser");
 
-    Ship playerdestroyer1 = Ship(2, 0, "Destroyer");
+    Ship playertorpedo1 = Ship(1, 0, "Torpedo");
 
-    Ship playerdestroyer2 = Ship(2, 0, "Destroyer");
+    Ship playertorpedo2 = Ship(1, 0, "Torpedo");
 
-    Ship playersubmarine = Ship(1, 0, "Submarine");
+    Ship playertorpedo3 = Ship(1, 0, "Torpedo");
 
-    Ship playersubmarine1 = Ship(1, 0, "Submarine");
+    Ship playertorpedo4 = Ship(1, 0, "Torpedo");
+
+    Ship playersubmarine1 = Ship(2, 0, "Submarine");
+
+    Ship playersubmarine2 = Ship(2, 0, "Submarine");
+
+    Ship playersubmarine3 = Ship(2, 0, "Submarine");
 
 public:
 

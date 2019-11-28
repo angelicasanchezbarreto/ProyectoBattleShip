@@ -52,21 +52,25 @@ void ComputerGame::printreference()
 
 void ComputerGame::settable()
 {
-    computerbattleship.setcomputership(tableroPC, size);
-
-    computercruiser.setcomputership(tableroPC, size);
+    computeraircraft.setcomputership(tableroPC, size);
 
     computercruiser1.setcomputership(tableroPC, size);
 
-    computerdestroyer.setcomputership(tableroPC, size);
+    computercruiser2.setcomputership(tableroPC, size);
 
-    computerdestroyer1.setcomputership(tableroPC, size);
+    computertorpedo1.setcomputership(tableroPC, size);
 
-    computerdestroyer2.setcomputership(tableroPC, size);
+    computertorpedo2.setcomputership(tableroPC, size);
 
-    computersubmarine.setcomputership(tableroPC, size);
+    computertorpedo3.setcomputership(tableroPC, size);
+
+    computertorpedo4.setcomputership(tableroPC, size);
 
     computersubmarine1.setcomputership(tableroPC, size);
+
+    computersubmarine2.setcomputership(tableroPC, size);
+
+    computersubmarine3.setcomputership(tableroPC, size);
 
 
 }

@@ -1,5 +1,5 @@
-#include "Game.cpp"
-#include "ComputerGame.cpp"
+#include "Game.h"
+#include "ComputerGame.h"
 
 int main() {
 

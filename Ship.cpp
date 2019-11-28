@@ -13,8 +13,9 @@ int Ship::getsize() {return size;}
 string Ship::getname() {return name;}
 
 void Ship::setship(vector<vector<casilla>> &board, int area)
+{
 
-{   int x;
+    int x;
 
     int y;
 
@@ -23,12 +24,17 @@ void Ship::setship(vector<vector<casilla>> &board, int area)
     do{
         cout << "Ingrese sus coordenada X para su " << name << endl;
         cin >> x;
+        x=x-1;
 
         cout << "Ingrese su coordenada Y para su " << name << endl;
         cin >> y;
+        y=y-1;
 
-        cout << "Ingrese su orientacion (H o V) para su " << name << endl;
-        cin >> o;}
+        if(name!="Torpedo"){
+            cout << "Ingrese su orientacion (H o V) para su " << name << endl;
+            cin >> o;
+        }
+    }
 
     while((o == 'H' && (x + size > area - 1 || y > area)) || ((o == 'V' && (y + size > area || x > area ))) || (o != 'H' && o != 'V'));
 

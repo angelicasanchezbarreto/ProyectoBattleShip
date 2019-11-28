@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/ComputerGame.cpp" "/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/cmake-build-debug/CMakeFiles/ProyectoBattleShip.dir/ComputerGame.cpp.o"
-  "/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Game.cpp" "/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/cmake-build-debug/CMakeFiles/ProyectoBattleShip.dir/Game.cpp.o"
-  "/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Ship.cpp" "/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/cmake-build-debug/CMakeFiles/ProyectoBattleShip.dir/Ship.cpp.o"
-  "/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/main.cpp" "/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/cmake-build-debug/CMakeFiles/ProyectoBattleShip.dir/main.cpp.o"
+  "/home/lica-pc/CLionProjects/POO 2/git_proyecto/ProyectoBattleShip/ComputerGame.cpp" "/home/lica-pc/CLionProjects/POO 2/git_proyecto/ProyectoBattleShip/cmake-build-debug/CMakeFiles/ProyectoBattleShip.dir/ComputerGame.cpp.o"
+  "/home/lica-pc/CLionProjects/POO 2/git_proyecto/ProyectoBattleShip/Game.cpp" "/home/lica-pc/CLionProjects/POO 2/git_proyecto/ProyectoBattleShip/cmake-build-debug/CMakeFiles/ProyectoBattleShip.dir/Game.cpp.o"
+  "/home/lica-pc/CLionProjects/POO 2/git_proyecto/ProyectoBattleShip/Ship.cpp" "/home/lica-pc/CLionProjects/POO 2/git_proyecto/ProyectoBattleShip/cmake-build-debug/CMakeFiles/ProyectoBattleShip.dir/Ship.cpp.o"
+  "/home/lica-pc/CLionProjects/POO 2/git_proyecto/ProyectoBattleShip/main.cpp" "/home/lica-pc/CLionProjects/POO 2/git_proyecto/ProyectoBattleShip/cmake-build-debug/CMakeFiles/ProyectoBattleShip.dir/main.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

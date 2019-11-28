@@ -1,3 +1,3 @@
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/cmake-build-debug/CMakeFiles/ProyectoBattleShip.dir
+/home/lica-pc/CLionProjects/POO 2/git_proyecto/ProyectoBattleShip/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/lica-pc/CLionProjects/POO 2/git_proyecto/ProyectoBattleShip/cmake-build-debug/CMakeFiles/ProyectoBattleShip.dir
+/home/lica-pc/CLionProjects/POO 2/git_proyecto/ProyectoBattleShip/cmake-build-debug/CMakeFiles/edit_cache.dir

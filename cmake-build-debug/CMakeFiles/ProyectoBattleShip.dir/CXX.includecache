@@ -6,37 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/ComputerGame.cpp
-ComputerGame.h
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/ComputerGame.h
-
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/ComputerGame.h
+/home/lica-pc/CLionProjects/POO 2/git_proyecto/ProyectoBattleShip/Ship.cpp
 Ship.h
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Ship.h
-Game.h
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Game.h
+/home/lica-pc/CLionProjects/POO 2/git_proyecto/ProyectoBattleShip/Ship.h
 
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Game.cpp
-Game.h
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Game.h
-Ship.cpp
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Ship.cpp
-
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Game.h
-Ship.h
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Ship.h
-Game.h
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Game.h
-
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Ship.cpp
-Ship.h
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Ship.h
-
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Ship.h
+/home/lica-pc/CLionProjects/POO 2/git_proyecto/ProyectoBattleShip/Ship.h
 casilla.h
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/casilla.h
+/home/lica-pc/CLionProjects/POO 2/git_proyecto/ProyectoBattleShip/casilla.h
 
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/casilla.h
+/home/lica-pc/CLionProjects/POO 2/git_proyecto/ProyectoBattleShip/casilla.h
 iostream
 -
 string
@@ -49,10 +27,4 @@ vector
 -
 iomanip
 -
-
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/main.cpp
-Game.cpp
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/Game.cpp
-ComputerGame.cpp
-/Users/jeronimo/Desktop/Proyecto2/ProyectoBattleShip/ComputerGame.cpp
 

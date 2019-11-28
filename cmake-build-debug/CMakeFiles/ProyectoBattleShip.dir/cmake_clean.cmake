@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ProyectoBattleShip.dir/ComputerGame.cpp.o"
   "CMakeFiles/ProyectoBattleShip.dir/Game.cpp.o"
-  "CMakeFiles/ProyectoBattleShip.dir/main.cpp.o"
   "CMakeFiles/ProyectoBattleShip.dir/Ship.cpp.o"
-  "ProyectoBattleShip.pdb"
+  "CMakeFiles/ProyectoBattleShip.dir/main.cpp.o"
   "ProyectoBattleShip"
+  "ProyectoBattleShip.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
